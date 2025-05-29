@@ -293,13 +293,13 @@ function ShowOrderDetails() {
                           <p className="flex justify-between py-1">
                             <span className="text-gray-500">Subtotal:</span>
                             <span className="font-medium text-gray-900">
-                              ${order.amount.toFixed(2)}
+                              {order.amount.toLocaleString()} đồng
                             </span>
                           </p>
                           <p className="flex justify-between py-1">
                             <span className="text-gray-500">Shipping Cost:</span>
                             <span className="font-medium text-gray-900">
-                              ${order.shippingCost.toFixed(2)}
+                              {order.shippingCost.toLocaleString()} đồng
                             </span>
                           </p>
                           <p className="flex justify-between py-1">
@@ -307,7 +307,7 @@ function ShowOrderDetails() {
                             <span className="font-medium text-gray-900">
                               {order.discountType === "percent"
                                 ? `${order.discountValue}%`
-                                : `$${order.discountValue.toFixed(2)}`}
+                                : `$${order.discountValue.toLocaleString()}`}
                               {order.voucherCode && ` (${order.voucherCode})`}
                             </span>
                           </p>
@@ -316,7 +316,7 @@ function ShowOrderDetails() {
                               Total Amount:
                             </span>
                             <span className="font-bold text-gray-900">
-                              ${order.totalAmount.toFixed(2)}
+                              {order.totalAmount.toLocaleString()} đồng
                             </span>
                           </p>
                         </div>
@@ -487,9 +487,9 @@ function ShowOrderDetails() {
                           <div>
                             <p className="text-sm font-medium text-gray-900">Price</p>
                             <p className="text-sm text-gray-500">
-                              {orderItem.price.toLocaleString('en-US', {
+                              {orderItem.price.toLocaleString('vi-VN', {
                                 style: 'currency',
-                                currency: 'USD',
+                                currency: 'VND',
                               })}
                             </p>
                           </div>
@@ -500,9 +500,9 @@ function ShowOrderDetails() {
                           <div>
                             <p className="text-sm font-medium text-gray-900">Total</p>
                             <p className="text-sm text-gray-500">
-                              {(orderItem.quantity * orderItem.price).toLocaleString('en-US', {
+                              {(orderItem.quantity * orderItem.price).toLocaleString('vi-VN', {
                                 style: 'currency',
-                                currency: 'USD',
+                                currency: 'VND',
                               })}
                             </p>
                           </div>

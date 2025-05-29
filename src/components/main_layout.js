@@ -28,11 +28,11 @@ const MainLayout = () => {const navigate = useNavigate();
                     setNavigationOptions([
                         { route_to: "/admin", label: "Admins" },
                         { route_to: "/admin/users", label: "Users" },
-                        { route_to: "/admin/posts", label: "Posts" },
+                        // { route_to: "/admin/posts", label: "Posts" },
                         { route_to: "/admin/products", label: "Products" },
                         { route_to: "/admin/order", label: "Orders" },
-                        { route_to: "/admin/categories", label: "Categories" },
-                        { route_to: "/admin/feedback", label: "Feedback" },
+                        // { route_to: "/admin/categories", label: "Categories" },
+                        // { route_to: "/admin/feedback", label: "Feedback" },
                     ]);
                 }
             } else {
@@ -211,13 +211,7 @@ const MainLayout = () => {const navigate = useNavigate();
                 <div className="overflow-y-auto px-3 h-full bg-white ">
                     <div className="pt-4 pb-8">
                         <Link to="/admin" className="flex items-center justify-start">
-                            <img
-                                src="/Logo-jlpt.png"
-                                className="mr-3"
-                                alt="JLPT Logo"
-                                width={96}
-                                height={48}
-                            />
+                            <h1 className="text-2xl font-semibold whitespace-nowrap text-gray-900">Dashboard Admin</h1>
                         </Link>
                     </div>
                     <ul className="space-y-2">

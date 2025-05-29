@@ -561,9 +561,6 @@ const AddProduct = () => {
                 Original Price
               </label>
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                  <span className="text-gray-500">$</span>
-                </div>
                 <input
                   type="text"
                   name="originalPrice"
@@ -573,8 +570,11 @@ const AddProduct = () => {
                   } text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full pl-8 p-2.5`}
                   value={formData.originalPrice}
                   onChange={handleChange}
-                  placeholder="0.00"
+                  placeholder="VNĐ"
                 />
+                {/* <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                  <span className="text-gray-500">đồng</span>
+                </div> */}
               </div>
               {errors.originalPrice && (
                 <p className="mt-1 text-sm text-red-600">{errors.originalPrice}</p>
@@ -589,9 +589,6 @@ const AddProduct = () => {
                 Sale Price
               </label>
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                  <span className="text-gray-500">$</span>
-                </div>
                 <input
                   type="text"
                   name="salePrice"
@@ -601,8 +598,11 @@ const AddProduct = () => {
                   } text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full pl-8 p-2.5`}
                   value={formData.salePrice}
                   onChange={handleChange}
-                  placeholder="0.00"
+                  placeholder="VNĐ"
                 />
+                {/* <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                  <span className="text-gray-500">đồng</span>
+                </div> */}
               </div>
               {errors.salePrice && (
                 <p className="mt-1 text-sm text-red-600">{errors.salePrice}</p>

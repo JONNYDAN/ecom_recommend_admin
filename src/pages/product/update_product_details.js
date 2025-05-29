@@ -612,9 +612,9 @@ const UpdateProductDetails = () => {
                 Original Price
               </label>
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                {/* <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                   <span className="text-gray-500">$</span>
-                </div>
+                </div> */}
                 <input
                   type="text"
                   name="originalPrice"
@@ -622,7 +622,7 @@ const UpdateProductDetails = () => {
                   className={`bg-gray-50 border ${
                     errors.originalPrice ? "border-red-500" : "border-gray-300"
                   } text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full pl-8 p-2.5`}
-                  value={formData.originalPrice}
+                  value={formData.originalPrice.toLocaleString()}
                   onChange={handleChange}
                   placeholder="0.00"
                 />
@@ -640,9 +640,9 @@ const UpdateProductDetails = () => {
                 Sale Price
               </label>
               <div className="relative">
-                <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                {/* <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                   <span className="text-gray-500">$</span>
-                </div>
+                </div> */}
                 <input
                   type="text"
                   name="salePrice"
@@ -650,7 +650,7 @@ const UpdateProductDetails = () => {
                   className={`bg-gray-50 border ${
                     errors.salePrice ? "border-red-500" : "border-gray-300"
                   } text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full pl-8 p-2.5`}
-                  value={formData.salePrice}
+                  value={formData.salePrice.toLocaleString()}
                   onChange={handleChange}
                   placeholder="0.00"
                 />

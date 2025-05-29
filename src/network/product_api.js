@@ -8,8 +8,8 @@ export function createProductData(data) {
     });
 }
 
-export function getAllProductsData(search) {
-    return axiosClient.get('/products', { params: { search: search } });
+export function getAllProductsData(search, page, limit) {
+    return axiosClient.get('/products', { params: { search: search, page: page, limit: limit } });
 }
 
 export function getProductDetailData(id) {

@@ -185,12 +185,12 @@ const ShowProductDetails = () => {
                 <div className="flex items-baseline">
                   {product.salePrice && product.salePrice < product.originalPrice ? (
                     <>
-                      <span className="text-2xl font-bold text-gray-900">${product.salePrice.toFixed(2)}</span>
-                      <span className="ml-2 text-lg text-gray-500 line-through">${product.originalPrice.toFixed(2)}</span>
+                      <span className="text-2xl font-bold text-gray-900">{product.salePrice.toLocaleString() || '0'} đồng</span>
+                      <span className="ml-2 text-lg text-gray-500 line-through">{product.originalPrice.toLocaleString() || '0'} đồng</span>
                     </>
                   ) : (
                     <span className="text-2xl font-bold text-gray-900">
-                      ${product.originalPrice?.toFixed(2) || "0.00"}
+                      {product.originalPrice?.toLocaleString() || "0.000"} đồng
                     </span>
                   )}
                 </div>
@@ -245,9 +245,9 @@ const ShowProductDetails = () => {
 
                 <div>
                   <h4 className="text-sm font-medium text-gray-500">Description</h4>
-                  <p className="mt-2 text-gray-700 whitespace-pre-line">
-                    {product.description || "No description available."}
-                  </p>
+                  <p className="mt-2 text-gray-700 whitespace-pre-line"
+                    dangerouslySetInnerHTML={{ __html: product.description }}
+                  ></p>
                 </div>
               </div>
             </div>

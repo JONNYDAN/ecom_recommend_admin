@@ -249,7 +249,7 @@ const OrderList = () => {
                             {new Date(order.createdAt).toLocaleDateString()}
                           </td>
                           <td className="px-4 py-3 font-medium">
-                            ${order.totalAmount.toFixed(2)}
+                            {order.totalAmount.toLocaleString()} đ
                           </td>
                           <td className="px-4 py-3">
                             <div className="flex items-center relative">
